@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: thanak81-tester-container
-          image: pipejet/thanak81-tester:0
+          image: pipejet/thanak81-tester:1
           ports:
             - containerPort: 5173
