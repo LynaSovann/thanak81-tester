@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thanak81-tester-deployment
+  labels:
+    app: thanak81-tester
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thanak81-tester
+  template:
+    metadata:
+      labels:
+        app: thanak81-tester
+    spec:
+      containers:
+        - name: thanak81-tester-container
+          image: pipejet/thanak81-tester:0
+          ports:
+            - containerPort: 5173
